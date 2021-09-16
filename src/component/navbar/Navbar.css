@@ -1,0 +1,14 @@
+.fijo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.pointer:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background: #B43B41;
+}
