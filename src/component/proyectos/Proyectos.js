@@ -8,9 +8,9 @@ import { Link, Redirect } from 'react-router-dom';
 const Proyectos = () => {
 
     return (
-        <div class="row  ">
-            <div className="col-lg-4 p-5">
-                <div class="card">
+        <div class="row row-cols-1 row-cols-md-3 g-4 p-5">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -18,8 +18,8 @@ const Proyectos = () => {
                     <a href="#" class="btn btn-primary">Go somewhere</a>            </div>
                 </div>
             </div>
-            <div className="col-lg-4 p-5">
-                <div class="card">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -27,8 +27,8 @@ const Proyectos = () => {
                     <a href="#" class="btn btn-primary">Go somewhere</a>            </div>
                 </div>
             </div>
-            <div className="col-lg-4 p-5">
-                <div class="card">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -36,8 +36,8 @@ const Proyectos = () => {
                     <a href="#" class="btn btn-primary">Go somewhere</a>            </div>
                 </div>
             </div>
-            <div className="col-lg-4 p-5">
-                <div class="card">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -45,8 +45,8 @@ const Proyectos = () => {
                     <a href="#" class="btn btn-primary">Go somewhere</a>            </div>
                 </div>
             </div>
-            <div className="col-lg-4 p-5">
-                <div class="card">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -54,8 +54,8 @@ const Proyectos = () => {
                     <a href="#" class="btn btn-primary">Go somewhere</a>            </div>
                 </div>
             </div>
-            <div className="col-lg-4 p-5">
-                <div class="card">
+            <div className="col ">
+                <div class="card at ">
                     <img src={pastel} class="card-img-top" alt="..."/>
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>

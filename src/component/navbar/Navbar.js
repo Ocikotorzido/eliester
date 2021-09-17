@@ -1,24 +1,51 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Navbar.css";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
+import { IconContext } from 'react-icons';
+
 
 const Navbar = () => { 
 
     const up = () => {
         window.scrollTo({top: 0, left: 0, behavior:"smooth"});
     }
-    
+
+    const [sidebar, setSidebar] = useState(false)
+
+    const showSidebar = () => setSidebar(!sidebar)
     return (
-       <nav className="fijo navbar navbar-expand text-white bg-dark fs-3">
-            <div className="container-fluid"><a onClick={up}>Logo</a>
-                <div class="collapse navbar-collapse  d-flex justify-content-end">
-                    <ul className="navbar-nav px-2">
-                        <li className="nav-item px-2 pointer rounded-3"><Link to="/" className="nav-link text-white fs-5">Inicio</Link></li>
-                        <li className="nav-item px-2 pointer rounded-3"><Link to="/about" className="nav-link text-white fs-5">Sobre mi</Link></li>
-                    </ul>
-                </div>
+        <>
+        <IconContext.Provider value={{color: '#fff'}}>
+            <div className="navbar bg-dark d-flex justify-content-start align-items-center">
+                <Link to="#" className='menu-bars'>
+                    <FaIcons.FaBars onClick={showSidebar}/>
+                </Link>
+
             </div>
-        </nav>
+            <nav className={sidebar ? 'nav-menu active bg-dark' : 'nav-menu bg-dark d-flex justify-content-center'}>
+                <ul className="nav-menu-items" onClick={showSidebar}>
+                    <li className="navbar-toggle">
+                        <Link to="#" className="menu-bars fs-3">
+                            <AiIcons.AiOutlineClose/>
+                        </Link>
+                    </li>
+                    {SidebarData.map((item, index) => {
+                        return (
+                            <li key = {index} className={item.cName}>
+                                <Link to={item.path}>
+                                    {item.icon}
+                                    <span>{item.tittle}</span>
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </nav>
+            </IconContext.Provider>
+        </>
     )
 }
 
