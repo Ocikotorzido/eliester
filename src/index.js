@@ -5,24 +5,32 @@ import Navbar from "./component/navbar/Navbar";
 import Proyectos from './component/proyectos/Proyectos';
 import Footer from './component/footer/Footer';
 import Cover from "./component/cover/Cover";
-import Contenido from './component/contenido/Contenido';
+import Login from './component/login/Login';
+import Registro from './component/login/Registro';
+import Home from './component/login/Home';
 
 
 ReactDOM.render(
     <BrowserRouter>
-        <Switch>
-            <Route exact path="/">
-                <Navbar/>
-                <Cover/>
-                <Proyectos/>
-                <Footer/>
-            </Route>
-            <Route exact path="/login">
-                <Navbar/>
-                <Cover/>
-                <Footer/>
-            </Route>
-        </Switch>
+            <Switch>
+                <Route exact path="/">
+                    <Navbar/>
+                    <Cover/>
+                    <Proyectos/>
+                    <Footer/>
+                </Route>
+                <Route exact path="/login">
+                    <Navbar/>
+                    <Login/>
+                
+                </Route>
+                <Route exact path="/registro">
+                    <Navbar/>
+                    <Registro/>
+                </Route>
+                <Route exact path="/home" component={Home}>
+                </Route>
+            </Switch>
     </BrowserRouter>,
   document.getElementById('root')
 );
